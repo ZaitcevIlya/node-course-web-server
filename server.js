@@ -40,6 +40,12 @@ app.get('/help', (req, res) => {
   res.send('./public/help.html')
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+    currentYear: new Date().getFullYear()
+  })
+})
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
